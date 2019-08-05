@@ -12,6 +12,7 @@
 		DE94EAFE22F85A2000FB418C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE94EAFC22F85A2000FB418C /* Main.storyboard */; };
 		DE94EB0022F85A2100FB418C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE94EAFF22F85A2100FB418C /* Assets.xcassets */; };
 		DE94EB0322F85A2100FB418C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE94EB0122F85A2100FB418C /* LaunchScreen.storyboard */; };
+		DE94EB0B22F85A5D00FB418C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB0A22F85A5D00FB418C /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DE94EAFF22F85A2100FB418C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE94EB0222F85A2100FB418C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE94EB0422F85A2100FB418C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE94EB0A22F85A5D00FB418C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				DE94EAF822F85A2000FB418C /* AppDelegate.swift */,
 				DE94EAFA22F85A2000FB418C /* ViewController.swift */,
+				DE94EB0A22F85A5D00FB418C /* PopUpViewController.swift */,
 				DE94EAFC22F85A2000FB418C /* Main.storyboard */,
 				DE94EAFF22F85A2100FB418C /* Assets.xcassets */,
 				DE94EB0122F85A2100FB418C /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE94EAFB22F85A2000FB418C /* ViewController.swift in Sources */,
+				DE94EB0B22F85A5D00FB418C /* PopUpViewController.swift in Sources */,
 				DE94EAF922F85A2000FB418C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

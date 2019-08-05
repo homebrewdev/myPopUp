@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,88 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myPopUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muw-dc-TbB">
+                                <rect key="frame" x="147.5" y="433" width="119" height="30"/>
+                                <state key="normal" title="Показать pop up"/>
+                                <connections>
+                                    <action selector="showPopUPButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Qg-0M-hc0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Muw-dc-TbB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5R3-rN-YrN"/>
+                            <constraint firstItem="Muw-dc-TbB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HDK-ge-PYj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="Ped-2g-ivG">
+            <objects>
+                <viewController storyboardIdentifier="popUpVCid" id="Knc-rf-BUh" customClass="PopUpViewController" customModule="myPopUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z0b-jl-WTs" userLabel="Alert View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEE-HO-hHD" userLabel="Message View">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLh-it-7Tp">
+                                        <rect key="frame" x="120" y="262" width="60" height="30"/>
+                                        <state key="normal" title="Закрыть">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closePopUPButtonTap:" destination="Knc-rf-BUh" eventType="touchUpInside" id="ibc-Tv-G93"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BYk-43-Bkl" userLabel="Alert Text View">
+                                        <rect key="frame" x="32" y="24" width="236" height="212"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" label="Alert Text view"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7Cu-4v-oob"/>
+                                    <constraint firstAttribute="bottom" secondItem="nLh-it-7Tp" secondAttribute="bottom" constant="8" id="EKw-Y9-wId"/>
+                                    <constraint firstAttribute="height" constant="300" id="ajZ-FN-lJl"/>
+                                    <constraint firstAttribute="bottom" secondItem="BYk-43-Bkl" secondAttribute="bottom" constant="64" id="cTg-DZ-ubf"/>
+                                    <constraint firstItem="BYk-43-Bkl" firstAttribute="top" secondItem="jEE-HO-hHD" secondAttribute="top" constant="24" id="n9I-PK-f4c"/>
+                                    <constraint firstItem="nLh-it-7Tp" firstAttribute="centerX" secondItem="jEE-HO-hHD" secondAttribute="centerX" id="pbL-Nb-Zny"/>
+                                    <constraint firstAttribute="trailing" secondItem="BYk-43-Bkl" secondAttribute="trailing" constant="32" id="uDf-hD-KnO"/>
+                                    <constraint firstItem="BYk-43-Bkl" firstAttribute="leading" secondItem="jEE-HO-hHD" secondAttribute="leading" constant="32" id="ugF-PQ-4K5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jEE-HO-hHD" firstAttribute="centerY" secondItem="Z0b-jl-WTs" secondAttribute="centerY" id="MFc-1S-cWM"/>
+                            <constraint firstItem="jEE-HO-hHD" firstAttribute="centerX" secondItem="Z0b-jl-WTs" secondAttribute="centerX" id="hVt-WF-lqt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6q9-Xr-YMV"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertTextView" destination="BYk-43-Bkl" id="fhy-bw-Mh9"/>
+                        <outlet property="messageView" destination="jEE-HO-hHD" id="3bu-Zs-VMA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZf-lY-Mbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510" y="9"/>
         </scene>
     </scenes>
 </document>
