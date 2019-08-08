@@ -57,11 +57,10 @@
                                             <action selector="closePopUPButtonTap:" destination="Knc-rf-BUh" eventType="touchUpInside" id="ibc-Tv-G93"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BYk-43-Bkl" userLabel="Alert Text View">
-                                        <rect key="frame" x="32" y="24" width="236" height="212"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Here will be a message text" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BYk-43-Bkl" userLabel="Alert Text View">
+                                        <rect key="frame" x="8" y="8" width="284" height="244"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" label="Alert Text view"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -72,11 +71,11 @@
                                     <constraint firstAttribute="width" constant="300" id="7Cu-4v-oob"/>
                                     <constraint firstAttribute="bottom" secondItem="nLh-it-7Tp" secondAttribute="bottom" constant="8" id="EKw-Y9-wId"/>
                                     <constraint firstAttribute="height" constant="300" id="ajZ-FN-lJl"/>
-                                    <constraint firstAttribute="bottom" secondItem="BYk-43-Bkl" secondAttribute="bottom" constant="64" id="cTg-DZ-ubf"/>
-                                    <constraint firstItem="BYk-43-Bkl" firstAttribute="top" secondItem="jEE-HO-hHD" secondAttribute="top" constant="24" id="n9I-PK-f4c"/>
+                                    <constraint firstAttribute="bottom" secondItem="BYk-43-Bkl" secondAttribute="bottom" constant="48" id="cTg-DZ-ubf"/>
+                                    <constraint firstItem="BYk-43-Bkl" firstAttribute="top" secondItem="jEE-HO-hHD" secondAttribute="top" constant="8" id="n9I-PK-f4c"/>
                                     <constraint firstItem="nLh-it-7Tp" firstAttribute="centerX" secondItem="jEE-HO-hHD" secondAttribute="centerX" id="pbL-Nb-Zny"/>
-                                    <constraint firstAttribute="trailing" secondItem="BYk-43-Bkl" secondAttribute="trailing" constant="32" id="uDf-hD-KnO"/>
-                                    <constraint firstItem="BYk-43-Bkl" firstAttribute="leading" secondItem="jEE-HO-hHD" secondAttribute="leading" constant="32" id="ugF-PQ-4K5"/>
+                                    <constraint firstAttribute="trailing" secondItem="BYk-43-Bkl" secondAttribute="trailing" constant="8" id="uDf-hD-KnO"/>
+                                    <constraint firstItem="BYk-43-Bkl" firstAttribute="leading" secondItem="jEE-HO-hHD" secondAttribute="leading" constant="8" id="ugF-PQ-4K5"/>
                                 </constraints>
                             </view>
                         </subviews>

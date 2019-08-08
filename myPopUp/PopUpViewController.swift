@@ -19,7 +19,7 @@ class PopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         messageView.layer.cornerRadius = 24 // зададим радиус скругления
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.75) // затеняем главый вью контроллера
+        self.view.backgroundColor = UIColor.gray.withAlphaComponent(0.75) // затеняем главый вью контроллера
         // анимашка появления/открытия алерта
         moveIn()
     }
